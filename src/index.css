@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header {
+    @apply h-36 flex flex-row space-x-5 fixed top-0 w-full px-12 z-10 bg-white;
+  }
+
+  .header > nav > a {
+    @apply font-navbar font-bold tracking-widest hover:text-green-500;
+  }
+
+  .stick {
+    @apply font-navbar h-16 flex flex-row space-x-5 fixed top-0 w-full px-12  bg-white z-10;
+  }
+
+  .stick > nav > a {
+    @apply hover:text-green-500;
+  }
+
+  .logo {
+    height: 2.75rem;
+  }
+
+  .buy-button {
+    @apply h-12 w-44 rounded-md flex items-center gap-4 bg-[#61ce70]  justify-center text-slate-100 hover:bg-green-700 font-navbar;
+  }
+
+  .hero {
+    background-image: url("./assets/GLENN-EXTEND-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .book-image {
+    height: 440px;
+    width: 340px;
+  }
+
+  .author-image {
+    height: 540px;
+    width: 380px;
+  }
+
+  .book-parag,
+  .author-p {
+    word-spacing: 18px;
+  }
+
+  .wave {
+    color: white;
+    z-index: 1;
+  }
+
+  .review {
+    background-image: url(./assets/shutterstock_2029653971-scaled.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .video {
+    height: 350px;
+    width: 800px;
+  }
+
+  .video-container {
+    position: absolute;
+    top: 176px;
+    left: 22.2%;
+  }
+
+  .backg-video {
+    display: grid;
+    grid-template-columns: 250px 370px 200px;
+    column-gap: 50px;
+    row-gap: 10px;
+  }
+
+  .award {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .award-container {
+    position: absolute;
+    top: 4%;
+    left: 17%;
+  }
+
+  .review-t {
+    background-color: black;
+    background-image: url(./assets/shutterstock_2029653971-scaled.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 220vh;
+  }
+
+  .review-t::before {
+    background-color: black;
+    opacity: 0.6;
+    content: "";
+    display: block;
+    height: inherit;
+    position: absolute;
+    width: 100%;
+  }
+
+  .carousel {
+    background-image: url(./assets/shutterstock_2028480539-scaled.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -50px;
+    left: 70px;
+    border-radius: 50px;
+    border-color: none;
+  }
+
+  .carousel::before {
+    background-color: green;
+    border-color: none;
+    content: "";
+    opacity: 0.4;
+    display: block;
+    height: inherit;
+    position: absolute;
+    width: 100%;
+    border-radius: 50px;
+  }
+
+  .content-carousel {
+    display: grid;
+    padding: 50px 0;
+    grid-template-columns: 560px 560px;
+    grid-template-rows: 300px;
+    column-gap: 40px;
+    row-gap: 40px;
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
+  }
+
+  .message {
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  .message::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    bottom: -20px;
+    width: 0;
+    z-index: 1;
+    left: 47%;
+    border: medium solid white;
+    border-width: 20px 20px 0px 20px;
+    border-color: white transparent transparent transparent;
+  }
+}
